@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/var/www/polr/
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: polr
+      MYSQL_PASSWORD: polr
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: polr
+    volumes:
+      - ./data/db:/var/lib/mysql

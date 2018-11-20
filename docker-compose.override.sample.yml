@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  web:
+    labels:
+      - "traefik.frontend.rule=Host:polr.campus-grenoble.fr"
+      - "traefik.port=80"
+      - "traefik.enable=true"
+
